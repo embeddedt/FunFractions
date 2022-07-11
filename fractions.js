@@ -132,9 +132,10 @@ function updateFractions() {
     var generationTries = 0;
     
     if(isMixedMode)
-        $(".mixed-part").show();
+        $(".question-mixed-part").show();
     else
-        $(".mixed-part").hide();
+        $(".question-mixed-part").hide();
+    
     var foundQuestion = false;
     while(generationTries++ <= 10) {
         foundQuestion = false;
@@ -456,7 +457,7 @@ $(window).load(function() {
             console.log("Expected decimal: " + expectedResult);
             console.log("Improper n: " + correctNumerator);
             console.log("Improper d: " + correctDenominator);
-            if(isMixedMode) {
+            if(true) {
                 var res = improperFractionToMixedNumber(correctNumerator, correctDenominator);
                 console.log("RES: " + res);
                 correctMixedVal = res[0];
