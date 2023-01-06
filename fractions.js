@@ -430,6 +430,12 @@ $(window).load(function() {
                     break;
                 }
             }
+            /* FIXME: should really be restructured so this is done in one place */
+            if(isCorrect) {
+                $("#check-button").attr("disabled", true);
+                $("#next-button").attr("disabled", false);
+                numAnswered++;
+            }
         }
         else if(mathOperation !== MATH_REDUCE) {
             switch(mathOperation) {
