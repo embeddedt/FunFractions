@@ -489,7 +489,8 @@ $(window).load(function() {
             corrextMixedVal = 0;
             
             console.log("Expected " + reduced[0] + "/" + reduced[1]);
-            if(n === reduced[0] && d === reduced[1]) {
+            if((n === reduced[0] && d === reduced[1])
+                || (reduced[0] == 1 && reduced[1] == 1 && m == 1 && n == 0 && d == 1) /* allow reducing to 1 and no mixed part */) {
                 console.log("Correct");
                 isCorrect = true;
             }
